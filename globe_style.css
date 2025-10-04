@@ -10,6 +10,11 @@ body {
     background: black;
   }
 
+#toggle-img {
+  width: 2em;
+  height: auto:
+}
+
 #toggle {
   position: absolute;
   top: 20px;
@@ -21,4 +26,5 @@ body {
   font-weight: bold;
   cursor: pointer;
   z-index: 1000;
+
 }
