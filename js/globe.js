@@ -2,21 +2,21 @@ console.log("Globe JS loaded");
 
 const myDOMElement = document.getElementById('globe-container');
 
-const dayTexture = '../images/globe/day_texture.png';
-const nightTexture = '../images/globe/night_texture.png';
+const dayTexture = '../images/textures/day_texture.png';
+const nightTexture = '../images/textures/night_texture.png';
 
 let hoverD = null;
 let isDay = true;
 
 const myData = [
-    { lat: 48.8575, lng: 2.3514, size: 1, color: 'red', label: 'Paris', target: "/locations/paris.html" },
-    { lat: 30.0444, lng: 31.2357, size: 1, color: 'blue', label: 'Cairo', target: "/locations/cairo.html" },
-    { lat: 19.4326, lng: -99.1332, size: 1, color: 'green', label: 'Mexico City', target: "/locations/mexicocity.html" },
-    { lat: 35.6764, lng: 139.6500, size: 1, color: 'orange', label: 'Tokyo', target: "/locations/tokyo.html" },
-    { lat: -22.9068, lng: -43.1729, size: 1, color: 'yellow', label: 'Rio de Janeiro', target: "/locations/rio.html" },
-    { lat: -42.70, lng: 172.217, size: 1, color: 'purple', label: 'Lake Sumner Forest', target: "/locations/sumner.html" },
-    { lat: -71.9499, lng: 23.3470, size: 1, color: 'pink', label: 'Princess Elisabeth', target: "/locations/elisabeth.html" },
-    { lat: -48.526, lng: -123.236, size: 1, color: 'cyan', label: 'Point Nemo', target: "/locations/nemo.html" }
+    { lat: 48.8575, lng: 2.3514, size: 1, color: 'red', label: 'Paris', target: "/locations/paris.php" },
+    { lat: 30.0444, lng: 31.2357, size: 1, color: 'blue', label: 'Cairo', target: "/locations/cairo.php" },
+    { lat: 19.4326, lng: -99.1332, size: 1, color: 'green', label: 'Mexico City', target: "/locations/mexicocity.php" },
+    { lat: 35.6764, lng: 139.6500, size: 1, color: 'orange', label: 'Tokyo', target: "/locations/tokyo.php" },
+    { lat: -22.9068, lng: -43.1729, size: 1, color: 'yellow', label: 'Rio de Janeiro', target: "/locations/rio.php" },
+    { lat: -42.70, lng: 172.217, size: 1, color: 'purple', label: 'Lake Sumner Forest', target: "/locations/sumner.php" },
+    { lat: -71.9499, lng: 23.3470, size: 1, color: 'pink', label: 'Princess Elisabeth', target: "/locations/elisabeth.php" },
+    { lat: -48.526, lng: -123.236, size: 1, color: 'cyan', label: 'Point Nemo', target: "/locations/nemo.php" }
 ];
 
 // separate labels for display

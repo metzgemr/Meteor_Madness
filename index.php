@@ -12,7 +12,7 @@
 
 <body>
 <header>
-    <img alt="Meteor Madness" label="Meteor Madness" src="../images/title_font.png" id="title_font">
+    <img alt="Meteor Madness" src="/images/title_font.png" id="title_font">
 </header>
 
 <nav>
