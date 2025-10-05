@@ -57,11 +57,32 @@ toggleButton.addEventListener('click', () => {
 
 let keyOpen = false
 
+const list = document.getElementById('key-list');
+
+myData.forEach(point => {
+    const li = document.createElement('li');
+    li.textContent = point.label;
+    li.style.color = point.color;
+    li.style.cursor = 'pointer' ;
+    li.addEventListener('click', () => {
+        myGlobe.pointOfView({
+            lat: point.lat,
+            lng: point.lng,
+            altitude: 0.5
+        }, 1000); // The second argument (1000ms) is the transition duration for animation
+    })
+    list.appendChild(li);
+});
+
 let toggleKeyButton = document.getElementById('key-toggle')
 let keyBox = document.getElementById('key-wrapper');
 toggleKeyButton.addEventListener('click', () => {
     keyOpen = !keyOpen;
-    keyBox.style.display = keyOpen ? 'block' : 'none';
+    keyBox.style.opacity = keyOpen ? '1' : '0';
+    keyBox.style.visibility = keyOpen ? 'visible' : 'hidden';
+
 });
+
+
 
 

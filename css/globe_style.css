@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body {
     margin: 0;
     height: 100%;
@@ -5,15 +10,19 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+#body {
+    background-size: 100% 100%;  /* stretch to full width and height */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 #meteor-controls-wrapper {
-    position: relative;
-    text-align: center;
-    padding: 2em;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 0 auto;
-    /* From https://css.glass */
+position: relative;
+text-align: center;
+padding: 2em;
+border-radius: 8px;
+max-width: 600px;
+margin: 0 auto;
+/* From https://css.glass */
     background: rgba(41, 62, 168, 0.57);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -69,11 +78,15 @@ body {
     height: auto;
 }
 #key-wrapper {
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    top: 20px;
+    bottom: 100px;
     right: 20px;
     z-index: 10000;
-    width: 60vw;
+    width: auto;
+    transition: 0.25s ease-in;
+    padding: 10px;
     /* From https://css.glass */
     background: rgba(41, 62, 168, 0.57);
     border-radius: 16px;
@@ -123,5 +136,11 @@ body {
         width: 100%;
         max-width: none;
         margin: 0;
+    }
+    #body {
+        background-size: cover;          /* fill screen, crop if needed */
+        background-position: center center; /* keep centered horizontally + vertically */
+        background-repeat: no-repeat;    /* no tiling */
+        background-color: black;
     }
 }
