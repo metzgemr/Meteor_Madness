@@ -1,5 +1,9 @@
 import math
+from flask import Flask, render_template
 
+app = Flask(__name__)
+
+@app.route("/")
 def main():
       velocity = int(input("velocity (m/s): ").strip())
       radius = int(input("radius (m): ").strip())
@@ -34,4 +38,4 @@ def scientific_notation(s):
     return s, count
 
 if __name__ == "__main__":
-     main()
+     app.run(debug=True)
