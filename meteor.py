@@ -32,6 +32,18 @@ def main():
             f" {(sn_crater):.2f}{crater_count} km diameter ({sn_crater_area:.2f}{crater_area_count} km^2). If its hit water, "
             f"the tsunami wave would cover a {(sn_wave):.2f}{wave_count} km diameter circle ({sn_wave_area:.2f}{wave_area_count} km^2).")
 
+      kinetic_impact = int(input("Enter the kinetic impact angle (°): "))
+      kinetic_rad = math.radians(kinetic_impact)
+
+      delta = ((10**9)**2 * velocity * 610 * math.sin(kinetic_rad) * 10000 * (1+ (610 * 10000) / (mass * velocity))) / (6.63759135 * 10**22)
+      minimum = (10**9 - radius - (angle_rad/math.pi) * 12756274) / (10**3)
+
+      if delta >= minimum:
+           word = "Success!"
+      else:
+           word = "Fail."
+      print(f"{word} The asteroid's semi-major axis changed by {delta:.0f}km, the minimum change needed was {minimum:.0f}km.")
+
 def scientific_notation(s):
     count = 0
     while s > 10:
@@ -48,4 +60,3 @@ def is_0(s):
 
 if __name__ == "__main__":
      main()
-
