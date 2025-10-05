@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteor Madness</title>
+    <link rel="stylesheet" href="../css/globe_style.css">
+    <script src="../js/globe.js"></script>
+    <script src="../js/slider-logic.js" defer></script>
+</head>
+
+<body>
+<header>
+    POINT NEMO
+</header>
+
+<nav>
+    <a href="../index.html"><button id="globe_btn"><img alt="Globe" src="Globe_IMG.png" id="globe_img"></button></a>
+</nav>
+
+<main>
+    <label for="weightSlider">Choose meteor radius (ft):</label>
+    <input type="range" id="weightSlider" min="0.5" max="15840" value="7000" step="0.5">
+    <p>Current Value: <span id="weightSliderValue">value</span></p>
+
+    <label for="angleSlider">Choose angle of impact (degrees):</label>
+    <input type="range" id="angleSlider" min="0" max="180" value="90" step="1">
+    <p>Current Value: <span id="angleSliderValue">value</span></p>
+
+    <label for="densitySlider">Choose meteor density (g/cm³):</label>
+    <input type="range" id="densitySlider" min="0.5" max="8" value="4" step="0.5">
+    <p>Current Value: <span id="densitySliderValue">50</span></p>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+
+
+</html>
+
