@@ -2,10 +2,11 @@ console.log("Globe JS loaded");
 
 const myDOMElement = document.getElementById('globe-container');
 
-const dayTexture = '../images/day_texture.png';
-const nightTexture = '../images/night_texture.png';
+const dayTexture = '../images/globe/day_texture.png';
+const nightTexture = '../images/globe/night_texture.png';
 
 let hoverD = null;
+let isDay = true;
 
 const myData = [
     { lat: 48.8575, lng: 2.3514, size: 1, color: 'red', label: 'Paris', target: "/locations/paris.html" },
@@ -34,17 +35,33 @@ const myGlobe = Globe()(myDOMElement)
     .labelColor(d => (myData.find(p => p.label === d.text) === hoverD ? 'white' : 'yellow'))
     .pointLabel(d => `<div style="padding:4px;"><b>${d.label}</b></div>`)
     .onPointClick(d => {
-        window.location.href = d.target;
+        window.location.href = d.target + (isDay ? "?tod=d" : "?tod=n");
     })
     .onPointHover(d => {
         hoverD = d;
         myGlobe
             .pointColor(d => (d === hoverD ? 'white' : d.color));
     });
-let isDay = true;
+
+// Day Night Logic
+
 let toggleButton = document.getElementById('toggle')
 toggleButton.addEventListener('click', () => {
     isDay = !isDay;
     myGlobe.globeImageUrl(isDay ? dayTexture : nightTexture);
+    document.getElementById("toggle-img").src = isDay ? "../images/day_night_icon.png" : "../images/night_day_icon.png";
     myGlobe.pointsData(myData);
 });
+
+// Ham key logix
+
+let keyOpen = false
+
+let toggleKeyButton = document.getElementById('key-toggle')
+let keyBox = document.getElementById('key-wrapper');
+toggleKeyButton.addEventListener('click', () => {
+    keyOpen = !keyOpen;
+    keyBox.style.display = keyOpen ? 'block' : 'none';
+});
+
+

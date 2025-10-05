@@ -2,6 +2,24 @@ body {
     margin: 0;
     height: 100%;
     overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#meteor-controls-wrapper {
+    position: relative;
+    text-align: center;
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    /* From https://css.glass */
+    background: rgba(41, 62, 168, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(41, 62, 168, 0.32);
 }
 
 #globe-container {
@@ -11,9 +29,10 @@ body {
 }
 
 #toggle-img {
-    width: 2em;
+    width: 4em;
     height: auto;
 }
+
 
 #toggle {
     position: absolute;
@@ -22,10 +41,87 @@ body {
     padding: 10px 16px;
     border: none;
     border-radius: 8px;
-    background: white;
+    background: none;
     font-weight: bold;
     cursor: pointer;
     z-index: 1000;
     width: auto;
     height: auto;
+}
+
+#toggle-key-img {
+    width: 4em;
+    height: auto;
+}
+
+#key-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+}
+#key-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    width: 60vw;
+    /* From https://css.glass */
+    background: rgba(41, 62, 168, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(41, 62, 168, 0.32);
+}
+
+#globe_img {
+    width: 6em;
+    height: auto;
+}
+
+#globe_btn {
+    width: auto;
+    height: auto;
+    outline: none;
+    border: none;
+    background: none;
+    float: left;
+}
+
+#globe_btn {
+    display: inline;
+}
+
+.slider-container {
+    display: block;
+}
+
+#title_font {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    width: 30em;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
 }
