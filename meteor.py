@@ -9,9 +9,9 @@ def main():
       angle_rad = math.radians(angle)
 
       mass = 4/3 * math.pi * radius**3 * density
-      energy = (1/2 * mass * velocity**2 * math.sin(angle_rad)) / 4.184 * 10**12
-      crater = 0.07 * 1.3 * (energy * (density/2650))**(1/3.4) / 1000
-      wave = 0.07 * 1.3 * (energy * (density/1000))**(1/3.4) / 1000
+      energy = (1/2 * mass * velocity**2 * math.sin(angle_rad)) / (4.184 * 10**12)
+      crater = 0.07 * 1.3 * (energy * (density/2650))**(1/3.4)
+      wave = 0.07 * 1.3 * (energy * (density/1000))**(1/3.4)
 
       crater_area = math.pi * crater**2 / 2
       wave_area = math.pi * wave**2 / 2
@@ -22,9 +22,15 @@ def main():
       sn_wave, wave_count = scientific_notation(wave)
       sn_wave_area, wave_area_count = scientific_notation(wave_area)
 
-      print(f"The impact energy is {(sn_energy):.2f} * 10^{energy_count} kilotons of TNT. If it hits land, the crater would have a"
-            f" {(sn_crater):.2f} * 10^{crater_count} km diameter ({sn_crater_area:.2f} * 10^{crater_area_count} km^2). If its hit water, "
-            f"the tsunami wave would cover a {(sn_wave):.2f} * 10^{wave_count} km diameter circle ({sn_wave_area:.2f} * 10^{wave_area_count} km^2).")
+      energy_count = is_0(energy_count)
+      crater_count = is_0(crater_count)
+      crater_area_count = is_0(crater_area_count)
+      wave_count = is_0(wave_count)
+      wave_area_count = is_0(wave_area_count)
+
+      print(f"The impact energy is {(sn_energy):.2f}{energy_count} kilotons of TNT. If it hits land, the crater would have a"
+            f" {(sn_crater):.2f}{crater_count} km diameter ({sn_crater_area:.2f}{crater_area_count} km^2). If its hit water, "
+            f"the tsunami wave would cover a {(sn_wave):.2f}{wave_count} km diameter circle ({sn_wave_area:.2f}{wave_area_count} km^2).")
 
 def scientific_notation(s):
     count = 0
@@ -33,5 +39,13 @@ def scientific_notation(s):
         count += 1
     return s, count
 
+def is_0(s):
+     if s <= 0:
+          t = ""
+     else:
+          t = f"*10^{s}"
+     return t
+
 if __name__ == "__main__":
      main()
+
