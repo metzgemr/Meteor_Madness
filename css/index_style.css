@@ -1,0 +1,79 @@
+/*Meteor Madness*/
+#title_font {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    width: 40vw;
+    height: auto;
+}
+
+/*Night/Day Button*/
+#toggle-img {
+    width: 4em;
+    height: auto;
+}
+
+#toggle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+}
+
+#toggle-key-img {
+    width: 4em;
+    height: auto;
+}
+
+#key-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+}
+#key-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    z-index: 10000;
+    width: auto;
+    transition: 0.25s ease-in;
+    padding: 10px;
+    /* From https://css.glass */
+    background: rgba(41, 62, 168, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(41, 62, 168, 0.32);
+}
+@media only screen and (max-width: 600px) {
+    #title_font {
+        width: 100vw;
+        right: auto;
+        height: auto;
+    }
+
+}

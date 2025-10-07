@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+}
+
+#result-body {
+    background-color: #000011;
+}
+
+/*Globe Canvas*/
+#globe-container {
+    float: left;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    margin: auto;
+    overflow: hidden;
+    background-color: #000011;
+}
+
+#globe-container canvas {
+    position: absolute;
+    top: 0;
+    right: -250px;
+    width: 170% !important;
+    height: 100% !important;
+    float: left;
+    object-fit: cover;
+}
+
+/*Stats*/
+#result-container {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40%;
+    padding: 10px;
+    /* From https://css.glass */
+    background: rgba(41, 62, 168, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(41, 62, 168, 0.32);
+
+}
+
+h1 {
+    padding: 10px;
+    margin-left: 10px;
+}

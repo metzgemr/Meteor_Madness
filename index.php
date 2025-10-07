@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meteor Madness</title>
     <link rel="stylesheet" href="css/globe_style.css">
+    <link rel="stylesheet" href="css/index_style.css">
     <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
     <script src="js/globe.js" defer></script>
 </head>

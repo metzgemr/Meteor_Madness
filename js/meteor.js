@@ -1,3 +1,5 @@
+/*Generated with the help of AI (ChatGPT) - troubleshooting*/
+
 console.log("Meteor Globe loaded");
 
 const myDOMElement1 = document.getElementById('meteor-container');
@@ -22,13 +24,13 @@ myDOMElement1.style.width = '250px';
 myDOMElement1.style.height = '250px';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const weightSlider = document.getElementById('weightSlider');
-    let mapped = mapRange(weightSlider.value, 0.5, 15840, 20, 4.5);
+    const radiusSlider = document.getElementById('radiusSlider');
+    let mapped = mapRange(radiusSlider.value, 0.5, 5000, 20, 4.5);
     myMeteor.pointOfView({
         altitude: mapped
     }, 3000);
-    weightSlider.addEventListener('input', (e) =>{
-        let mapped = mapRange(e.target.value, 0.5, 15840, 20, 4.5);
+    radiusSlider.addEventListener('input', (e) =>{
+        let mapped = mapRange(e.target.value, 0.5, 5000, 20, 4.5);
         myMeteor.pointOfView({
             altitude: mapped
         }, 0);

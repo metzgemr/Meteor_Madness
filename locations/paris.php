@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meteor Madness</title>
-    <link rel="stylesheet" href="../css/globe_style.css">
-    <script src="../js/slider-logic.js"></script>
-    <script src="../js/set-location-bg.js"></script>
-
+    <?php
+    include '../components/location_imports.php';
+    ?>
 </head>
 
 <body id="body">
@@ -32,6 +31,7 @@ include '../components/location_header.php';
 <footer>
 
 </footer>
+
 
 </body>
 
